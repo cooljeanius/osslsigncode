@@ -5,6 +5,7 @@ osslsigncode
 stamp-h*
 *DS_Store*
 Makefile
+Makefile*orig
 
 #.*#
 .*.bak
@@ -33,3 +34,4 @@ Makefile
 *~
 *.gz
 *.bz2
+*.dSYM

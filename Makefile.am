@@ -1,4 +1,4 @@
-ACLOCAL_AMFLAGS = -I m4
+ACLOCAL_AMFLAGS = -I m4 --install
 AUTOMAKE_OPTIONS = foreign 1.10
 MAINTAINERCLEANFILES = \
 	config.log config.status \
@@ -15,3 +15,6 @@ bin_PROGRAMS = osslsigncode
 
 osslsigncode_SOURCES = osslsigncode.c
 osslsigncode_LDADD = $(OPENSSL_LIBS) $(OPTIONAL_LIBCURL_LIBS)
+
+clean-local:
+	-rm -rf *.dSYM || rmdir *.dSYM
