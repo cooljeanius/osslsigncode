@@ -3,6 +3,7 @@ config.guess linguist-vendored
 config.h.in linguist-generated
 config.sub linguist-vendored
 configure linguist-generated
+configure.scan linguist-generated
 depcomp linguist-vendored
 install-sh linguist-vendored
 missing linguist-vendored
