@@ -1,7 +1,10 @@
 compile linguist-vendored
 config.guess linguist-vendored
+config.h.in linguist-generated
 config.sub linguist-vendored
+configure linguist-generated
+depcomp linguist-vendored
 install-sh linguist-vendored
 missing linguist-vendored
-Makefile.in linguist-vendored
+Makefile.in linguist-generated
 m4/pkg.m4 linguist-vendored

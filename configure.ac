@@ -12,7 +12,7 @@ AM_MAINTAINER_MODE
 AC_CONFIG_SRCDIR([osslsigncode.c])
 AC_CANONICAL_HOST
 
-dnl Checks for programs.
+dnl# Checks for programs.
 AC_PROG_CC
 AC_PROG_CC_C_O
 AC_USE_SYSTEM_EXTENSIONS
@@ -94,10 +94,19 @@ if test "x${with_curl}" = "xyes"; then
 fi
 
 # Checks for header files.
-AC_CHECK_HEADERS([ctype.h fcntl.h stdio.h time.h])
+AC_CHECK_HEADERS([ctype.h fcntl.h time.h])
 AC_CHECK_HEADERS([openssl/err.h openssl/objects.h openssl/evp.h \
                   openssl/x509.h openssl/pkcs7.h openssl/pkcs12.h \
                   openssl/pem.h openssl/asn1t.h])dnl
+
+if test "x${ac_cv_header_stdio_h}" = "x"; then
+  test -z "${ac_cv_header_stdio_h}" || unset ac_cv_header_stdio_h
+  AC_CHECK_HEADERS([stdio.h])
+fi
+if test "x${ac_cv_header_unistd_h}" = "x"; then
+  test -z "${ac_cv_header_unistd_h}" || unset ac_cv_header_unistd_h
+  AC_CHECK_HEADERS([unistd.h])
+fi
 
 # Checks for typedefs, structures, and compiler characteristics.
 AC_TYPE_SIZE_T
